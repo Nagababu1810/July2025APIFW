@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>July2025APIFW</groupId>
+  <artifactId>July2025APIFW</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>July2025APIFW</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>17</maven.compiler.release>
+  </properties>
+
+  <dependencies>
+   <dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.5.6</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.7.0</version>
+  
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.20.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.42</version>
+</dependency>
+
+<dependency>
+    <groupId>com.jayway.jsonpath</groupId>
+    <artifactId>json-path</artifactId>
+    <version>2.9.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>json-schema-validator</artifactId>
+    <version>5.5.6</version>
+</dependency>
+<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>ooxml-schemas</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>openxml4j</artifactId>
+			<version>1.0-beta</version>
+		</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+<dependency>
+    <groupId>com.opencsv</groupId>
+    <artifactId>opencsv</artifactId>
+    <version>5.12.0</version>
+</dependency>
+  
+  <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured -->
+ <dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-rest-assured</artifactId>
+    <version>2.30.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.30.0</version>
+</dependency>
+
+<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>chaintest-testng</artifactId>
+			<version>1.0.12</version>
+		</dependency>
+
+ </dependencies>
+  <build>
+   
+   <plugins>
+     <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-compiler-plugin</artifactId>
+       <version>3.14.1</version>
+       <configuration>
+         <release></release>
+         <source>21</source>
+         <target>21</target>
+       </configuration>
+     </plugin>
+     
+     
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.4</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>/src/test/resource/testrunners/testng_sanity.xml</suiteXmlFile>
+            <suiteXmlFile>{suitefile}</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+     
+   </plugins>
+   
+   
+   
+   
+  </build>
+</project>
